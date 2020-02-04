@@ -239,14 +239,15 @@ app.layout = html.Div(
     ]
 ) 
 
-### Function to update the datatable
 def update_styles(selected_columns):
     """Updates the colors of datatable if selected by user"""
     return [
         {
             'if': { 'column_id': i },
             'background_color': '#D2F3FF'
-        } for i in selected_columns]
+        } for i in selected_columns
+		]
+
 
 ### Datatable callback for the update_graphs function
 @app.callback(
